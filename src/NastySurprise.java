@@ -10,7 +10,7 @@ public static void main(String[] args) {
 }
 	public NastySurprise() {
 	
-		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor stubddfg
 		JFrame frame = new JFrame();
 		frame.setVisible(true);
 		JPanel panel = new JPanel();
