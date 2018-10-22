@@ -32,6 +32,7 @@ public class SimonSays extends KeyAdapter {
 	private void makeAlbum() {
 		// 2. Add the four images that match keyboard keys like this: 
 		//images.put(new Integer(KeyEvent.VK_UP), "up.jpg");
+images.put(null, null);
 
 		// 3. Use a JOptionPane to tell the user the rules: "Press the matching key when
 		// 'Simon says' otherwise press a different key"
