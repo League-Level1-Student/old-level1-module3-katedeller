@@ -24,7 +24,7 @@ import javax.swing.JPanel;
 /* Check out the Jeopardy Handout to see what the end result should look like: http://bit.ly/1bvnvd4 */
 
 public class Jeopardy implements ActionListener {
-	private JButton firstButton;
+	private JButton b1;
 	private JButton secondButton;
 	private JButton thirdButton, fourthButton;
 	private JPanel quizPanel;
@@ -55,19 +55,20 @@ quizPanel.add(j1);
 		// 5. Add the quizPanel to the frame
 quizPanel.add(frame);
 		// 6. Use the createButton method to set the value of firstButton
-JButton b1 = createButton("$200")
-;		// 7. Add the firstButton to the quizPanel
+b1 = createButton("$200");		
+// 7. Add the firstButton to the quizPanel
 quizPanel.add(b1);
 		// 8. Write the code to complete the createButton() method below. Check that your
 		// game looks like Figure 1 in the Jeopardy Handout - http://bit.ly/1bvnvd4.
 
 		// 9. Use the secondButton variable to hold a button using the createButton
 		// method
-
+secondButton= createButton("$400");
 		// 10. Add the secondButton to the quizPanel
-
+quizPanel.add(secondButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
-
+b1.addActionListener(this);
+secondButton.addActionListener(this);
 		// 12. Write the code to complete the actionPerformed() method below
 
 		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
@@ -95,7 +96,7 @@ button.setText(dollarAmount);
 buttonCount ++;
 		// Return your new button instead of the temporary button
 
-		return new JButton("temporary button");
+		return button;
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -105,11 +106,11 @@ buttonCount ++;
 
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
-
+if (buttonPressed == b1) {
 			// Call the askQuestion() method
- 
+ askQuestion("What year was 9/11", "2001", 200);
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
-
+}
 		// If the buttonPressed was the secondButton
 
 			// Call the askQuestion() method with a harder question
