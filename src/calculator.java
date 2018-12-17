@@ -16,6 +16,6 @@ void subtract(int a, int b) {
 	JOptionPane.showMessageDialog(null, answer);
 }
 void multiply(int a, int b) {
-	int answer=ab;
+	int answer=a*b;
 }
 }
